@@ -1,0 +1,17 @@
+
+name: 'Generate semver'
+description: 'Generate semver from commit messages'
+author: 'randilfernando<randil.fernando@outlook.com>'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+inputs:
+  branch-diff-file:
+    description: 'The branch diff file'
+    required: true
+  previous-version:
+    description: 'Previous released version'
+    required: true
+outputs:
+  generated-version:
+    description: 'Generated semver version number'
